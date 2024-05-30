@@ -1,4 +1,4 @@
-import { getDatabase, ref, set } from "firebase/database";
+import { getDatabase, onValue, ref, set } from "firebase/database";
 import { app } from "../../Firebase";
 
 export const ADD_USER = (obj) => {
@@ -45,7 +45,7 @@ export const GET_USER = () => {
 
 const SET_USER = (data) => {
   return {
-      type : "getuser",
+      type : "GETUSER",
       payload : data
   }
 }
